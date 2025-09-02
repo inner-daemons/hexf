@@ -1,3 +1,4 @@
+use alloc::format;
 use proc_macro::{Delimiter, Group, Ident, Literal, Punct, Spacing, Span, TokenStream, TokenTree};
 
 const EXPECTED_STRING_LITERAL: &str = "expected string literal";
@@ -60,7 +61,7 @@ fn extract_string_value(literal: &str) -> Result<&str, ExtractStringError> {
             Err(ExtractStringError::BadLiteral)
         }
     } else if literal.starts_with('r') {
-        let mut forward: std::iter::Skip<std::str::CharIndices<'_>> =
+        let mut forward: core::iter::Skip<core::str::CharIndices<'_>> =
             literal.char_indices().skip(1);
         let mut reverse = literal.char_indices().rev();
         loop {

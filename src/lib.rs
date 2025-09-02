@@ -9,6 +9,10 @@
 //! # }
 //! ```
 
+#![no_std]
+extern crate alloc;
+use alloc::format;
+
 mod tokens;
 
 use proc_macro::{Literal, TokenStream, TokenTree};
