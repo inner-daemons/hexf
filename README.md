@@ -8,7 +8,7 @@
 [docsrs-image]: https://docs.rs/hexf/badge.svg
 [docsrs]: https://docs.rs/hexf/
 
-Hexadecimal float support for Rust 1.43 or later. (For earlier versions, try `0.1.0`)
+No-std hexadecimal float support for Rust 1.43 or later. (For earlier versions, try `0.1.0`)
 
 ```rust
 use hexf::hexf64;
